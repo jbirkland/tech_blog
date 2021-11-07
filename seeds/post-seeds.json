@@ -1,0 +1,14 @@
+[
+  {
+        "title": "Object Relational Mapping",
+        "content": "Object–relational mapping (ORM, O/RM, and O/R mapping tool) in computer science is a programming technique for converting data between incompatible type systems using object-oriented programming languages",
+        "user_id": 1
+
+    },
+    {
+        "title": "CRUD",
+        "content": "CRUD is an acronym that comes from the world of computer programming and refers to the four functions that are considered necessary to implement a persistent storage application: create, read, update and delete.",
+        "user_id": 2
+    }
+]
+
