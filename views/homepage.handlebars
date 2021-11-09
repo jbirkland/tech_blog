@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {{> navbar}}
+  <canvas class="send-back" id="canvas-basic"></canvas>
+
+    <div class='row border d-flex justify-content-around checkoutButton bg-dark' data-user_id={{user_id}}>
+    {{#each posts as |post|}}
+    {{> post}}
+    {{/each}}
+  </div>
+
+
+</body>
+</html>
