@@ -20,11 +20,13 @@ router.get("/", async (req, res) => {
 
 //login route
 router.get("/login", (req, res) => {
-  if (req.session.logged_in) {
+  console.log("hello",req.session)
+  if (req.session.loggedIn) {
+    console.log("Hello There")
     res.redirect("/dashboard");
     return;
   }
-
+console.log("This is a xon")
   res.render("login");
 });
 

@@ -3,12 +3,12 @@ const { Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 
-router.get('/', (req, res) => {
+// router.get('/', (req, res) => {
   
-})
+// })
 
 
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const userData = await Post.create(
       req.body,
@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.logged_in = true;
+      req.session.loggedIn = true;
 
       res.status(200).json(userData);
     });
