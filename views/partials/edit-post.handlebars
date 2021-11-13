@@ -1,0 +1,61 @@
+<div class="dish-card">
+  <div class="dish-card-header">
+    {{postTitle}}
+  </div>
+  <div class="card-body">
+    <p>
+      postContent:
+      {{postContent}}
+    </p>
+    <p>
+      Guest:
+      {{postContent}}
+    </p>
+    {{#if has_nuts}}
+      <p class="has-nuts">
+        Contains Nuts
+      </p>
+    {{/if}}
+  </div>
+</div>
+
+<!-- This is the form for updating a dish. According to MVC framework, what is this form responsible for? -->
+<!-- This form is responsible for the UI logic, or the components in the View that the user will interact with. -->
+<!--What isn't it responsible for? -->
+<!--It is not responsible for data-related logic, requests, or business-logic. -->
+
+<div class="edit-dish-container">
+  <h2>
+    Update Dish
+  </h2>
+  <form class="edit-post-form">
+    <label for="postTitle">
+      Title:
+    </label>
+    <br />
+    <textarea id="postTitle" name="postTitle" rows="2" cols="30">
+      {{postTitle}}
+    </textarea>
+    <br />
+    <label for="postContent">
+      Content:
+    </label>
+    <br />
+    <textarea id="postContent" name="postContent" rows="5" cols="30">
+      {{postContent}}
+    </textarea>
+    <br />
+    <label for="postContent">
+      postContent:
+    </label>
+    <br />
+    <textarea id="postContent" name="postContent" rows="2" cols="30">
+      {{postContent}}
+    </textarea>
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+</div>
+<script src="/js/edit-post.js"></script>
+<script src="/js/make-post.js"></script>
