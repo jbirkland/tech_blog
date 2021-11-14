@@ -34,27 +34,27 @@ router.get('/posts/:id', async (req, res) => {
     };     
 });
 
-router.put('/:id', async (req, res) => {
+// router.put('/:id', async (req, res) => {
  
-  try {
-    const editPost = await Post.update(
-      {
-        title: req.body.title,
-        content: req.body.content,
-        comment: req.body.comment,
-      },
-      {
-        where: {
-          id: req.params.id,
-        },
-      }
-    );
+//   try {
+//     const editPost = await Post.update(
+//       {
+//         title: req.body.title,
+//         content: req.body.content,
+//         comment: req.body.comment,
+//       },
+//       {
+//         where: {
+//           id: req.params.id,
+//         },
+//       }
+//     );
     
-    res.status(200).json(editPost);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.status(200).json(editPost);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 
 
